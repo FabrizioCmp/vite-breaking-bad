@@ -27,9 +27,12 @@ export default{
 <style scoped lang="scss">
 .character_img{
     width: 100%;
+    max-width: 200px;
     height: 100px;
     background-color: black;
     border-radius: 10px;
+    display: block;
+    margin: auto;
 }
 div{
     text-align: center;
