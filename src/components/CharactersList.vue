@@ -1,6 +1,6 @@
 <template>
-    <div class="row p-3 justify-content-center">
-        <div class="col-xs-12 col-md-4 col-lg-2 " v-for="character,i in store.characterList" :key="i">
+    <div class="row p-3 justify-content-center align-items-stretch">
+        <div class="col-xs-12 col-md-4 col-lg-2 gy-3" v-for="character,i in store.characterList" :key="i">
             <CharacterCard :character="character"></CharacterCard>
         </div>
     </div>

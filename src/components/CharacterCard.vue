@@ -3,7 +3,8 @@
         <div class="character_img">
             <img src="" alt="">
         </div>
-        <div>{{character.name}}</div>
+        <div class="name">{{character.name}}</div>
+       
     </div>
 </template>
 
@@ -25,18 +26,26 @@ export default{
 </script>
 
 <style scoped lang="scss">
+
+.my_card{
+    border-radius: 15px;
+    box-shadow: 5px 5px 8px black ;
+    height: 100%;
+    background-color: antiquewhite;
+}
 .character_img{
     width: 100%;
-    max-width: 200px;
     height: 100px;
     background-color: black;
     border-radius: 10px;
     display: block;
     margin: auto;
+    object-fit: contain;
 }
-div{
+.name{
     text-align: center;
     margin: .5rem 0;
     font-weight: 600;
 }
+
 </style>
