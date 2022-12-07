@@ -1,9 +1,9 @@
 <template>
     <div class="d-flex justify-content-start align-items-center my-2">
         <div class="logo">
-            <img src="/imgs/SW.png" alt="">
+            <img src="/imgs/RandM.png" alt="">
         </div>
-        <h1>Star Wars API</h1>
+        <h1>Rick & Morty</h1>
     </div>
 </template>
 

@@ -1,7 +1,7 @@
 <template>
     <div class="my_card">
         <div class="character_img">
-            <img src="" alt="">
+            <img class="" :src="character.image" alt="">
         </div>
         <div class="name">{{character.name}}</div>
        
@@ -36,11 +36,17 @@ export default{
 .character_img{
     width: 100%;
     height: 100px;
+    max-width: 200px;
     background-color: black;
     border-radius: 10px;
     display: block;
     margin: auto;
-    object-fit: contain;
+    overflow: hidden;
+   img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+   }
 }
 .name{
     text-align: center;
