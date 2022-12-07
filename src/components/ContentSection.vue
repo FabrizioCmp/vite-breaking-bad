@@ -6,6 +6,7 @@
             <option value="Female">Female</option>
             <option value="unknown">unknown</option>
         </select>
+        <button @click="resetFilter">Reset filter</button>
         <div class="content_box">
             <div class="result_section">Found {{store.dataInfo.count}} characters</div>
             <CharactersList/>
@@ -32,7 +33,12 @@ export default {
         changefilter(){
             this.store.filter = this.selectedFilter.gender;
             fetchDataCharacters();
+        },
+        resetFilter(){
+            this.selectedFilter.gender = "";
+            this.changefilter();
         }
+
     }
 }
 </script>
@@ -44,6 +50,17 @@ select{
     border-radius: 10px;
     padding: .5rem;
     margin-left: 1rem;
+}
+
+button{
+    background-color: transparent;
+    margin-left: 1rem;
+    border-radius: 5px;
+    border: 1px solid black;
+        &:active{
+            background-color: rgb(223, 199, 167);
+        }
+
 }
 .content_box{
     background-color: white;
