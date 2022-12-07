@@ -41,11 +41,11 @@ export default{
     border-radius: 10px;
     display: block;
     margin: auto;
-    overflow: hidden;
+    box-shadow: 3px 3px 5px gray;
    img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
    }
 }
 .name{
