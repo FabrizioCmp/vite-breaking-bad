@@ -1,13 +1,13 @@
 <template>
     <div class="container">
-        <select name="category" id="cat" placeholder="select category">
-            <option value="" disabled selected >select an option</option>
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
+        <select name="category" id="cat" v-model="selectedFilter.gender" @change="changefilter">
+            <option value="" disabled selected >select a filter</option>
+            <option value="Male" >Male</option>
+            <option value="Female">Female</option>
+            <option value="unknown">unknown</option>
         </select>
         <div class="content_box">
-            <div class="result_section">Found X characters</div>
+            <div @click="consol" class="result_section">Found X characters</div>
             <CharactersList/>
         </div>
     </div>
@@ -16,12 +16,22 @@
 
 <script>
 import CharactersList from "./CharactersList.vue";
+import { store,fetchDataCharacters } from "../store.js";
 
 export default {
     components: {CharactersList},
     data(){
         return{
-            
+            store,
+            selectedFilter: {
+                gender: "",
+            }
+        }
+    },
+    methods:{
+        changefilter(){
+            this.store.filter = this.selectedFilter.gender;
+            fetchDataCharacters();
         }
     }
 }
