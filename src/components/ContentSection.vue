@@ -7,7 +7,7 @@
             <option value="unknown">unknown</option>
         </select>
         <div class="content_box">
-            <div @click="consol" class="result_section">Found X characters</div>
+            <div class="result_section">Found {{store.dataInfo.count}} characters</div>
             <CharactersList/>
         </div>
     </div>

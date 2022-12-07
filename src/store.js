@@ -4,6 +4,7 @@ import axios from "axios";
 export const store = reactive({
     characterList: [],
     loading: false,
+    dataInfo: {},
     filter: "",
 })
 
@@ -15,8 +16,9 @@ export function fetchDataCharacters(){
         }
     })
         .then((resp) =>{
-            console.log(resp.data.results)
+            console.log(resp)
             store.characterList = resp.data.results;
+            store.dataInfo = resp.data.info
             store.loading = false;
         })
 }
